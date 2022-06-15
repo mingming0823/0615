@@ -1,0 +1,380 @@
+* {
+  /*     border: solid 1px black; */
+}
+* {
+  maging: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.box {
+  width: 400px;
+  height: 550px;
+  position: relative;
+  overflow: hidden;
+}
+
+.box img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: all 0.6s;
+}
+
+.box:hover img {
+  transform: scale(1.5);
+}
+
+.box:hover .box-hover-text {
+  display: block;
+}
+
+.box .box-hover-text {
+  width: 100%;
+  height: 100%;
+  position: absolute; */
+  left: 0;
+  top: 0;
+  display: none;
+  background-color: rgba(0,0,0, 0.7);
+}
+
+.box .box-body {
+  color: #fff;
+}
+
+h2.box-body {
+  padding-top: 10px;
+  text-align: center;
+}
+
+p.box-body {
+  padding: 15px;
+  line-height: 1.8em;
+}
+
+.box .box-see-more {
+  width: 100px;
+  height: 50px;
+  line-height: 50px;
+  background-color: #b0e0e6;
+  position: absolute;
+  right: 30px;
+  bottom: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.box-see-more a {
+  text-decoration: none;
+  color: #000;
+}
+.box-see-more a:hover {
+  color: #69868a;
+}
+body {
+  padding: 50px;
+  display: flex; /*      */
+  justify-content: center;
+  font-size: 15px;
+  line-height: 28px;
+  letter-spacing: 1px;
+  background-color: #678;
+  color: rgba(255, 255, 255, 0.95);
+  font-family: "微軟正黑體", sans-serif;
+}
+.resume {
+  display: flex;
+  max-width: 950px;
+  border: solid 8px white;
+  padding: 15px;
+  position: relative; /*設定decoration為相關位置*/
+}
+.left {
+  flex: 5; /*左邊有5等分*/
+}
+.right {
+  flex: 7; /*右邊有7等分*/
+}
+.left,
+.right {
+  padding: 15px;
+}
+.left {
+  padding-right: 50px; /*      */
+}
+.right {
+  padding-left: 50px;
+  padding-top: 150px;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+h2 {
+  margin: 0; /* 方框上下左右距離為0*/
+  margin-bottom: 25px; /* 方框下距離為25px*/
+  font-weight: 400;
+}
+h2::after {
+  content: "";
+  display: inline-block; /*接在文字後面 */
+  width: 20px; /*產生的方框寬*/
+  height: 8px; /*產生的方框高*/
+  background-color: #ff7168;
+  margin-left: 10px;
+}
+h4 {
+  margin: 0;
+  margin-top: 40px;
+  opacity: 0.8;
+  font-weight: 400;
+}
+.circle:hover
+.listExperience > li {
+  display: flex;
+  margin-bottom: 10px;
+}
+.listExperience li ul {
+  padding-left: 10px;
+  margin-left: 10px;
+  border-left: solid 4px;
+}
+.listExperience > li:nth-child(1) ul {
+  border-color: #ff7168;
+}
+.listExperience > li:nth-child(2) ul {
+  border-color: #ffa582;
+}
+.listExperience > li:nth-child(3) ul {
+  border-color: #ffb087;
+}
+.listExperience > li:nth-child(4) ul {
+  border-color: #ffde9e;
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  background-color: #a95679;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+}
+.p90,
+.p180,
+.p270,
+.p360 {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  left: 50%;
+  top: 0;
+  background-color: #ff7168;
+}
+.p180 {
+  left: 50%;
+  top: 50%;
+}
+.p270 {
+  left: 0;
+  top: 50%;
+}
+.p360 {
+  left: 0;
+  top: 0;
+}
+.num{
+  position: absolute;
+  color: #fff;
+  left: 50%;
+  top: 50%;
+ transform:translate(-50%,-50%);
+  z-index: 4;
+}
+
+.circle:hover::after {
+  content: "";
+  display: block;
+  background-color: #ff75;
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  border-radius: 50%; /*四個角都為50%圓弧*/
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 4;
+}
+.listskill{
+  display: flex;
+  flex-wrap: wrap;
+}
+.listskill li {
+  width: 25%;
+  padding: 10px;
+  box-sizing: border-box; /*包含內距5px的距離值*/
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.listProgram .bar {
+  
+  width: 70%;
+  height: 30px;
+  border: solid 2px #ff121;
+  border-radius: 5px;
+}
+.listProgram li{
+  display: flex; /*同一行*/
+  justify-content: space-between; /*左右兩邊*/
+  background-color: #ff52;
+  align-items: center; /*讓文字與線條可以在上下中間對其*/
+  padding-top: 10px; /*上下間隔為10px*/
+}
+.value::after {
+  
+  display: block;
+  height: 100%;
+  width: 100%;
+  background-color: #ff5232;
+  content: "Touch me";
+}
+.p10:hover {
+  width: 10%;
+}
+.p20:hover {
+  width: 20%;
+}
+.p30:hover {
+  width: 30%;
+}
+.p40:hover {
+  width: 40%;
+}
+.p50:hover {
+  width: 50%;
+}
+.p60:hover {
+  width: 60%;
+}
+.p70:hover {
+  width: 70%;
+}
+.p80:hover {
+  width: 90%;
+}
+.p90:hover {
+  width: 50%;
+}
+.p100:hover{
+  width: 100%;
+}
+
+hr {
+  border: none; /*取消hr的預設設定*/
+  border-bottom: solid 4px #ff7168; /*只顯示底部線條大小*/
+  width: 40%; /*只顯示40%的線條*/
+  margin-left: 0; /*讓div離左邊距離為0px*/
+}
+.btn {
+  border: solid 3px #a0455d;
+  padding: 5px 20px;
+  margin-right: 10px;
+}
+.button{
+text-decoration: none;
+text-transform: uppercase;
+margin-right: 5px;
+width: 10;
+letter-spacing: 2px;
+color:#fff;
+outline: 2px solid #fff;
+padding: 30px 40px;
+position: relative;
+overflow: hidden;
+transition: color 1s;
+}
+.button:hover{
+  color: #833ab4;
+}
+.button::before{
+content:"";
+position: absolute;
+top: 0;
+height: 50%;
+background-color:#fff;
+transform: skewX(35deg);
+z-index: -1;
+  transition: width 1s
+}
+button:hover::before{
+width: 150%;
+}
+.me:hover {
+  background-color:#ff7168;
+}
+.fill:hover {
+  background-color: #ff7168;
+}
+body{
+  display: flex;
+  background: #000;
+  min-height: 97vh;
+  align-items: center;
+justify-content: center;
+  font-family: 'Lobster', cursive;
+}
+.content {
+  position: relative;
+}
+.content h2 {
+  color: #fff;
+  font-size: 8em;
+  position: absolute;
+  letter-spacing: 5px;
+  transform: translate(2%, -100%);
+}
+.content h2:nth-child(1) {
+  color: transparent;
+  -webkit-text-stroke: 2px rgb(166, 0, 255);
+}
+.content h2:nth-child(2) {
+  color: orange;
+  animation: animate 2s ease-in-out infinite;
+}
+@keyframes animate {
+    0%,
+    50% {
+      clip-path: polygon(
+          0% 45%,
+          16% 44%,
+          33% 50%,
+          54% 60%,
+          70% 61%,
+          84% 59%,
+          100% 52%,
+          100% 100%,
+          0% 100%
+     
+      );
+    100% {
+      clip-path: polygon(
+          0% 45%,
+          16% 44%,
+          33% 50%,
+          60% 60%,
+          70% 61%,
+          84% 59%,
+          90% 52%,
+          100% 100%,
+          0% 100%
+     );
+  }
+}
